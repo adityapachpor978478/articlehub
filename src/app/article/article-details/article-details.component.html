@@ -1,0 +1,54 @@
+<div  class="container mt-4">
+  <button class="btn btn-secondary mb-4" (click)="goBack()">Back</button>
+</div>
+
+
+<div class="article-details container mt-5">
+  <h1>{{ article.title }}</h1>
+  <p><strong>Author:</strong> {{ article.author }} | <strong>Date:</strong> {{ article.publishDate | date }}</p>
+  <img *ngFor="let img of article.images" [src]="img" alt="Article Image" class="img-fluid mt-3 mb-3">
+  <p>{{ article.description }}</p>
+
+  <div class="like-button-container">
+    <button class="btn" [class.btn-primary]="article.likedByUser" [class.btn-outline-primary]="!article.likedByUser" (click)="toggleLike()">
+      <i class="fa" [ngClass]="article.likedByUser ? 'fa-thumbs-up' : 'fa-thumbs-o-up'"></i>
+      {{ article.noOfLikes +   (article.noOfLikes == 1 ? " Like" : "Likes")}}
+    </button>
+  </div>
+
+  <!-- Comments Section -->
+  <div *ngIf="article.comments && article.comments.length > 0" class="comments-section mt-4">
+    <app-comment-thread (replyClicked)="replyToComment($event)" [article]="article" [comments]="article.comments"></app-comment-thread>
+  </div>
+
+  <div *ngIf="showReplyBox" class="reply-box mt-4">
+    <textarea [(ngModel)]="replyText" class="form-control" placeholder="Write a reply..."></textarea>
+    <button (click)="submitReply()" class="btn btn-primary mt-2">Submit Reply</button>
+  </div>
+
+
+  <div *ngIf="!addCommentBox">
+    <button (click)="addNewComment()" class="btn btn-primary mt-2">Add New Comment</button>
+  </div>
+  <div *ngIf="addCommentBox" class="reply-box mt-4">
+    <textarea [(ngModel)]="commentText" class="form-control" placeholder="Add new comment..."></textarea>
+    <button (click)="submitComment()" class="btn btn-primary mt-2">Add comment</button>
+  </div>
+
+  <h3>Our Suggestions</h3>
+  <div class="row" *ngIf="suggestions.length">
+    <div class="col-md-4" *ngFor="let suggestion of suggestions" (click)="navigateToArticle(suggestion.articleId)">
+      <div class="card">
+        <img [src]="suggestion.thumbnail" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">{{ suggestion.title }}</h5>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+  

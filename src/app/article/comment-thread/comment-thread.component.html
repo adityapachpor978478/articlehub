@@ -1,0 +1,15 @@
+<!-- comment-thread.component.html -->
+<div *ngFor="let comment of comments" class="comment">
+  <div class="comment-body">
+    <strong>{{ comment.username }}</strong>
+    <p>{{ comment.text }}</p>
+    <button (click)="likeComment(comment)" [class.btn-primary]="comment.likedByUser" [class.btn-outline-primary]="!comment.likedByUser">
+      <i class="fa" [ngClass]="comment.likedByUser ? 'fa-thumbs-up' : 'fa-thumbs-o-up'"></i>
+      {{ comment.noOfLikes + (comment.noOfLikes == 1 ? " Like" : "Likes") }}
+    </button>
+    <button *ngIf="showReplyButton" (click)="replyToComment(comment.id)">Reply</button>
+  </div>
+  <div *ngIf="comment.replies && comment.replies.length > 0" class="replies">
+    <app-comment-thread [showReplyButton]="false" [comments]="comment.replies"></app-comment-thread>
+  </div>
+</div>

@@ -1,0 +1,30 @@
+import { NgModule } from '@angular/core';
+import { CommonModule } from '@angular/common';
+import { FormsModule } from '@angular/forms';
+
+import { ArticleRoutingModule } from './article-routing.module';
+import { ArticleComponent } from './article.component';
+import { DashboardComponent } from './dashboard/dashboard.component';
+import { ArticleDetailsComponent } from './article-details/article-details.component';
+import { AddArticleComponent } from './add-article/add-article.component';
+import { CommentThreadComponent } from './comment-thread/comment-thread.component';
+import { AuthorsComponent } from './authors/authors.component';
+
+
+@NgModule({
+  declarations: [
+    ArticleComponent,
+    DashboardComponent,
+    ArticleDetailsComponent,
+    AddArticleComponent,
+    CommentThreadComponent,
+    AuthorsComponent
+  ],
+  imports: [
+    CommonModule,
+    ArticleRoutingModule,
+    FormsModule
+    
+  ]
+})
+export class ArticleModule { }

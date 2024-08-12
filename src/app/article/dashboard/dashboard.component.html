@@ -1,0 +1,36 @@
+<div class="container mt-4">
+    <div class="row mb-3">
+      <div class="col-md-4">
+        <input [(ngModel)]="searchText" class="form-control" placeholder="Search articles...">
+      </div>
+      <div class="col-md-4">
+        <select [(ngModel)]="sortOption" class="form-select">
+          <option value="latest">Latest</option>
+          <option value="mostPopular">Most Popular</option>
+        </select>
+      </div>
+      <div class="col-md-4">
+        <button (click)="applyFilters()" class="btn btn-primary w-100">Submit</button>
+      </div>
+    </div>
+
+    <!-- <div class="row author-row mb-1"> -->
+      <!-- <a href="" (click)="navigateToAuthors()">authors</a> -->
+    <!-- </div> -->
+  
+    <div *ngFor="let article of filteredArticles" class="article-preview mb-4" (click)="navigateToArticle(article.articleId)">
+      <h3>{{ article.title }}</h3>
+      <p>{{ article.description }}</p>
+      <p><strong>Author:</strong> {{ article.author }} | <strong>Date:</strong> {{ article.publishDate | date }}</p>
+      <p><strong>Likes:</strong> {{ article.noOfLikes }}</p>
+    </div>
+  
+    <div *ngIf="totalPages > 1" class="pagination-row d-flex justify-content-center mt-4">
+      <button class="btn btn-primary mx-1" (click)="onPageChange(currentPage - 1)" [disabled]="isPreviousDisabled()">Previous</button>
+      <button *ngFor="let i of [].constructor(totalPages); let idx = index" class="btn btn-secondary mx-1" (click)="onPageChange(idx + 1)" [class.active]="currentPage === idx + 1">
+        {{ idx + 1 }}
+      </button>
+      <button class="btn btn-primary mx-1" (click)="onPageChange(currentPage + 1)" [disabled]="isNextDisabled()">Next</button>
+    </div>
+  </div>
+  

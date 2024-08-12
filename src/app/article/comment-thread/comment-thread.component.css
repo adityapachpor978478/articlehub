@@ -1,0 +1,20 @@
+.comment {
+  margin-bottom: 1rem;
+  padding: 0.5rem;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.comment-body {
+  margin-bottom: 0.5rem;
+}
+
+.replies {
+  margin-left: 1rem;
+  border-left: 2px solid #ddd;
+  padding-left: 1rem;
+}
+
+.reply-box {
+  margin-top: 1rem;
+}

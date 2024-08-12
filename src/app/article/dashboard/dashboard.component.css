@@ -1,0 +1,15 @@
+.article-preview {
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .article-preview:hover {
+    background-color: #f9f9f9;
+  }
+
+  .author-row {
+    text-align: right;
+  }
+  
