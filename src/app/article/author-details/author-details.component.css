@@ -1,9 +1,9 @@
-.author-name {
+.article-title {
     font-weight: bold;
     cursor: pointer;
     text-decoration: none;
   }
-  .author-name:hover {
+  .article-title:hover {
     text-decoration: underline;
   }
   

@@ -4,14 +4,15 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 import { ArticleDetailsComponent } from './article-details/article-details.component';
 import { AddArticleComponent } from './add-article/add-article.component';
 import { AuthorsComponent } from './authors/authors.component';
+import { AuthorDetailsComponent } from './author-details/author-details.component';
 
 
 const routes: Routes = [
-  { path: '', component: DashboardComponent },
-  { path: 'dashboard', component: DashboardComponent },
-  { path: 'authors', component: AuthorsComponent },
+  { path: '', component: DashboardComponent, pathMatch: 'full' },
   { path: 'article/:articleId', component: ArticleDetailsComponent },
+  { path: 'authors', component: AuthorsComponent },
   { path: 'addArticle', component: AddArticleComponent },
+  { path: 'author-details/:name', component: AuthorDetailsComponent },
 ];
 
 @NgModule({

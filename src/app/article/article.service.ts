@@ -6,6 +6,7 @@ export interface Article {
   thumbnail: string;
   description: string;
   author: string;
+  authorBio?: string;
   images: string[];
   links: string[];
   publishDate: Date;
@@ -24,6 +25,11 @@ export interface Comment {
   replies?: Comment[];    // Add this line for nested replies
 }
 
+export interface Author {
+  name: string;
+  authorBio: string;
+}
+
 
 @Injectable({
   providedIn: 'root'
@@ -38,6 +44,7 @@ export class ArticleService {
       thumbnail: 'path/to/thumbnail1.jpg',
       description: 'This is the description of the first article.',
       author: 'Author 8',
+      authorBio: 'Bio for Author 8',
       publishDate: new Date('2024-01-01'),
       noOfLikes: 10,
       images: ['path/to/image1.jpg'],
@@ -65,6 +72,7 @@ export class ArticleService {
       thumbnail: 'path/to/thumbnail2.jpg',
       description: 'This is the description of the second article.',
       author: 'Author 1',
+      authorBio: 'Bio for Author 1',
       publishDate: new Date('2024-01-02'),
       noOfLikes: 10,
       images: ['path/to/image2.jpg'],
@@ -136,7 +144,29 @@ export class ArticleService {
     }
     return undefined;
   }
-  
+
+  getAuthors(): Author[] {
+    const authorsMap: { [name: string]: string } = {};
+    this.articles.forEach(article => {
+      if (!authorsMap[article.author]) {
+        authorsMap[article.author] = article.author || '';
+      }
+    });
+    return Object.keys(authorsMap).map(name => ({
+      name,
+      authorBio: this.articles.find(el => el.author == name)?.authorBio || ''
+    }));
+  }
+
+  searchAuthors(query: string): Author[] {
+    return this.getAuthors().filter(author =>
+      author.name.toLowerCase().includes(query.toLowerCase())
+    );
+  }
+
+  getArticlesByAuthor(authorName: string): Article[] {
+    return this.articles.filter(article => article.author === authorName);
+  }  
   
   
 }

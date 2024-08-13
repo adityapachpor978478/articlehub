@@ -1,0 +1,15 @@
+<div class="container mt-4">
+    <button class="btn btn-secondary mb-4" (click)="goBack()">Back</button>
+</div>
+
+<div class="container mt-4">
+    <h2>{{ author.name }}</h2>
+    <p>{{ author.authorBio }}</p>
+    <h3>Articles by {{ author.name }}</h3>
+    <ul class="list-group">
+      <li *ngFor="let article of articles" class="list-group-item">
+        <a [routerLink]="['/dashboard/article', article.articleId]" class="article-title">{{ article.title }}</a>
+      </li>
+    </ul>
+  </div>
+  

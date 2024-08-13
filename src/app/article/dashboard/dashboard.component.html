@@ -14,9 +14,9 @@
       </div>
     </div>
 
-    <!-- <div class="row author-row mb-1"> -->
-      <!-- <a href="" (click)="navigateToAuthors()">authors</a> -->
-    <!-- </div> -->
+    <div class="row author-row mb-1">
+      <a class="link-primary" style="cursor: pointer;" (click)="navigateToAuthors()">authors</a>
+    </div>
   
     <div *ngFor="let article of filteredArticles" class="article-preview mb-4" (click)="navigateToArticle(article.articleId)">
       <h3>{{ article.title }}</h3>

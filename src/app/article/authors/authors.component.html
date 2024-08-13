@@ -1,1 +1,16 @@
-<p>authors works!</p>
+<div class="container mt-4">
+    <button class="btn btn-secondary mb-4" (click)="goBack()">Back</button>
+</div>
+
+<div class="container mt-4">
+    <div class="input-group mb-3">
+        <input [(ngModel)]="searchQuery" type="text" class="form-control" placeholder="Search authors...">
+        <button class="btn btn-primary" (click)="searchAuthors()">Search</button>
+    </div>
+    <ul class="list-group">
+        <li *ngFor="let author of authors" class="list-group-item">
+            <a (click)="viewAuthorDetails(author.name)" class="author-name">{{ author.name }}</a>
+            <p>{{ author.authorBio }}</p>
+        </li>
+    </ul>
+</div>
