@@ -12,7 +12,7 @@ export interface Article {
   publishDate: Date;
   noOfLikes: number;
   comments: Comment[];
-  likedByUser?: boolean;  // Add this line
+  likedByUser?: boolean;
 }
 
 
@@ -21,8 +21,8 @@ export interface Comment {
   username: string;
   text: string;
   noOfLikes: number;
-  likedByUser?: boolean;  // Track if the user liked the comment
-  replies?: Comment[];    // Add this line for nested replies
+  likedByUser?: boolean;
+  replies?: Comment[];
 }
 
 export interface Author {
@@ -47,7 +47,7 @@ export class ArticleService {
       authorBio: 'Bio for Author 8',
       publishDate: new Date('2024-01-01'),
       noOfLikes: 10,
-      images: ['path/to/image1.jpg'],
+      images: ['https://www.wordscoach.com/blog/wp-content/uploads/2020/06/17th-Blog-Articles-1140x624.png'],
       links: ['https://example.com'],
       comments: [
         {
@@ -75,7 +75,7 @@ export class ArticleService {
       authorBio: 'Bio for Author 1',
       publishDate: new Date('2024-01-02'),
       noOfLikes: 10,
-      images: ['path/to/image2.jpg'],
+      images: ['https://www.wordscoach.com/blog/wp-content/uploads/2020/06/17th-Blog-Articles-1140x624.png'],
       links: ['https://example.com'],
       comments: [
         {
@@ -95,6 +95,10 @@ export class ArticleService {
       ]
     },
    ];
+
+   addArticle(article: Article): void {
+    this.articles.push(article);
+  }
 
   getArticles() {
     return this.articles;

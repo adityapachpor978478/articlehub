@@ -11,7 +11,7 @@ const routes: Routes = [
   { path: '', component: DashboardComponent, pathMatch: 'full' },
   { path: 'article/:articleId', component: ArticleDetailsComponent },
   { path: 'authors', component: AuthorsComponent },
-  { path: 'addArticle', component: AddArticleComponent },
+  { path: 'add-article', component: AddArticleComponent },
   { path: 'author-details/:name', component: AuthorDetailsComponent },
 ];
 

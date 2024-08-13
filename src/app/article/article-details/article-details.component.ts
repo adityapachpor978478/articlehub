@@ -34,6 +34,13 @@ export class ArticleDetailsComponent implements OnInit {
     this.router.navigate(['/dashboard']);
   }
 
+  urlify(text: any) {
+    var urlRegex = /(https?:\/\/[^\s]+)/g;
+    return text.replace(urlRegex, function(url: string) {
+      return `<a href="${url}" target="_blank">${url}</a>`;
+    })
+  }
+
   toggleLike() {
     if (this.article.likedByUser) {
       this.articleService.unlikeArticle(this.article.articleId);

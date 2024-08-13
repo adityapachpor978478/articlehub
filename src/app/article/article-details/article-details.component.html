@@ -7,6 +7,11 @@
   <h1>{{ article.title }}</h1>
   <p><strong>Author:</strong> {{ article.author }} | <strong>Date:</strong> {{ article.publishDate | date }}</p>
   <img *ngFor="let img of article.images" [src]="img" alt="Article Image" class="img-fluid mt-3 mb-3">
+  <ng-container *ngIf="article.links.length">
+    <div *ngFor="let link of article.links">
+      <span [innerHTML]="urlify(link)"></span>
+    </div>
+  </ng-container>
   <p>{{ article.description }}</p>
 
   <div class="like-button-container">

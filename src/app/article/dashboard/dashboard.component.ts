@@ -94,6 +94,10 @@ export class DashboardComponent implements OnInit {
     this.router.navigate(['/dashboard/authors']);
   }
 
+  navigateToAddArticle() {
+    this.router.navigate(['/dashboard/add-article']);
+  }
+
   isPreviousDisabled(): boolean {
     return this.currentPage === 1;
   }
