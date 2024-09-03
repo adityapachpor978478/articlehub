@@ -97,6 +97,139 @@ The latest chips in our devices combine a CPU, GPU, and NPU on a single chip, us
         }
       ]
     },
+    {
+      articleId: 3,
+      title: 'Metadata in Photos',
+      // thumbnail: 'path/to/thumbnail2.jpg',
+      description: `Metadata is a term that describes data about data. Photos taken with smartphones and digital cameras contain much information about the photo besides the image itself. This additional information about the photo is called Metadata. 
+
+Metadata allows us to use photo apps on our smartphones and computers to organize, search for, and categorize photos. Some of the Metadata is added automatically by cameras.   
+
+Metadata can be added to the photo file when the camera takes the picture or later in a photo app. There's a lot of information about a photo with the photo in Metadata, some applicable for everyday photographers and some for more advanced amateurs or professionals. `,
+      author: 'David Bosh',
+      authorBio: 'A showroom owner who is also technology enthusist',
+      publishDate: new Date('2024-03-07'),
+      noOfLikes: 2,
+      images: ['assets/metadata.jpeg'],
+      links: ['https://en.wikipedia.org/wiki/Exif'],
+      comments: [
+        {
+          username: 'Richard',
+          text: 'Seems nice',
+          id: 3,
+          noOfLikes: 1,
+          replies: [
+            {
+              username: 'David',
+              id: 3,
+              text: 'Thanks Richard!',
+              noOfLikes: 0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      articleId: 4,
+      title: 'Should AI be permitted in college classrooms?',
+      // thumbnail: 'path/to/thumbnail2.jpg',
+      description: `I believe the purpose of a college class is to teach students to think: to read scholarship, ask questions, formulate a thesis, collect and analyze data, draft an essay, take feedback from the instructor and other students, and write a final draft.
+
+One problem with ChatGPT is that it allows students to produce a decent paper without thinking or writing for themselves.Students could get fine grades if they used ChatGPT to “write” their papers. But they will have missed a chance to enter a dialogue with two profound thinkers about a topic that could reshape American higher education and society.
+
+The point of learning to write is not simply intellectual self-discovery.`,
+      author: 'David Bosh',
+      authorBio: 'A showroom owner who is also technology enthusist',
+      publishDate: new Date('2024-03-06'),
+      noOfLikes: 5,
+      images: ['assets/ai.avif'],
+      links: ['https://idronline.org/article/education/can-generative-ai-help-the-education-sector-in-india/?gad_source=1&gclid=CjwKCAjw59q2BhBOEiwAKc0ijdrHFA3CmeUkay--v-RPJWeF3ldsWvr_6ASRwTH2gG29QqkI-PegsBoCm0UQAvD_BwE'],
+      comments: [
+        {
+          username: 'Sarah',
+          text: 'Interesting',
+          id: 3,
+          noOfLikes: 2,
+          replies: [
+            {
+              username: 'David',
+              id: 9,
+              text: 'Thanks Sarah!',
+              noOfLikes: 0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      articleId: 5,
+      title: 'How to safeguard wildlife by helping zoos',
+      // thumbnail: 'path/to/thumbnail2.jpg',
+      description: `The word “zoo” is complicated and can have different meanings to different people. For some, a zoo is an organization committed to animal well-being and wildlife conservation that offers its visitors a fun and educational experience. To others, it is a place where people pay to see exotic animals in poor conditions.
+      While many zoos have dedicated staff for conservation projects, collaboration with universities can help zoos increase their contribution to conservation science.
+
+Historically, in Canada and other countries, most published research from zoos is related to veterinary sciences, not conservation. Academic institutions can provide scientific and technical expertise in conservation science, as well as access to envelopes of funding that are not available to zoos alone.
+
+University researchers have rigorous science communication requirements that include not only publication in peer-reviewed journals, but conference presentations, lectures and more. When zoos collaborate with universities, they have greater access to funding for conservation research and produce accessible research for conservation practitioners, researchers and the public alike.`,
+      author: 'Richard Smith',
+      authorBio: 'A scholar from Harvard University who likes nature and wildlife',
+      publishDate: new Date('2024-03-05'),
+      noOfLikes: 19,
+      images: ['assets/zoo.avif'],
+      links: ['https://nzpnewdelhi.gov.in/en/page/education_and_conservation'],
+      comments: [
+        {
+          username: 'Vincent',
+          text: 'I also feel like we should do something to preserve the wildlife.',
+          id: 3,
+          noOfLikes: 2,
+          replies: [
+            {
+              username: 'Richard',
+              id: 4,
+              text: 'Yes Vincent, let us start a group to collect ideas.',
+              noOfLikes: 1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      articleId: 6,
+      title: 'How universities could help whole communities tackle climate change',
+      // thumbnail: 'path/to/thumbnail2.jpg',
+      description: `As centres of learning, universities have the potential to help whole communities learn about and address climate change. Education can lead us to change our attitudes and behaviour. It can also help us deal with the anxiety or fear of doom that can stun us into inaction.
+
+        But there are aspects of how universities work that can create a divide between them and the communities that live and work around them. Universities could anchor climate collaboration. While many already take part in outreach work, they need to do more to build community links and use the resources they already have more widely.
+        Higher education institutions could design courses focused on sustainable living. They could train community educators to work with local residents and provide campus events on sustainable living involving people from the community.
+
+        The university learning environment is designed to support the development of “epistemic agency”: assuming control of our own learning and the development of our own understanding. Epistemic agency is a fundamental feature of our humanity and a useful tool to be deployed to enhance collective responsibility in tackling wicked problems. Universities could support the epistemic agency of whole communities, not just students.
+
+        Universities cannot independently solve the climate crisis. But as custodians and producers of knowledge, universities have the characteristics and resources to support collaborative learning and collective action.The Conversation
+        `,
+      author: 'Richard Smith',
+      authorBio: 'A scholar from Harvard University who likes nature and wildlife',
+      publishDate: new Date('2024-02-10'),
+      noOfLikes: 4,
+      images: ['assets/climate.avif'],
+      links: ['https://sciendo.com/article/10.2478/dcse-2021-0022'],
+      comments: [
+        {
+          username: 'Vincent',
+          text: 'This could take years to implement though',
+          id: 3,
+          noOfLikes: 1,
+          replies: [
+            {
+              username: 'Richard',
+              id: 4,
+              text: 'You are right, it will be slow change',
+              noOfLikes: 2
+            }
+          ]
+        }
+      ]
+    },
   ];
 
   addArticle(article: Article): void {

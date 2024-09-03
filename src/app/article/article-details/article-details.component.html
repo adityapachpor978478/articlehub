@@ -42,7 +42,7 @@
     <button (click)="submitComment()" class="btn btn-primary mt-2">Add comment</button>
   </div>
 
-  <h3>Our Suggestions</h3>
+  <h3 *ngIf="suggestions.length">Our Suggestions</h3>
   <div class="row" *ngIf="suggestions.length">
     <div class="col-md-4" *ngFor="let suggestion of suggestions" (click)="navigateToArticle(suggestion.articleId)">
       <div class="card">
