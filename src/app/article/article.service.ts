@@ -37,29 +37,28 @@ export interface Author {
 export class ArticleService {
 
   private articles: Article[] = [
-    // Add 12 articles here with 4 articles per author
     {
       articleId: 1,
-      title: 'First Article',
-      // thumbnail: 'path/to/thumbnail1.jpg',
-      description: 'This is the description of the first article.',
-      author: 'Author 8',
-      authorBio: 'Bio for Author 8',
-      publishDate: new Date('2024-01-01'),
-      noOfLikes: 10,
-      images: ['assets/property1.jpg'],
-      links: ['https://example.com'],
+      title: '3D Printer',
+      // thumbnail: 'path/to/thumbnail2.jpg',
+      description: `3D printers create objects using by "printing" many thin layers thin of liquid material that dries to a solid shape. These layers are printed one at a time, but when added together, they create a 3 dimensional solid object. Adding layers together is called an "additive" process for creating an object. You might be familiar with wood carving, where the wood carver removes wood to create the sculpture. The carving removes material to create the object, and it's called a "subtractive" process. Much of our manufacturing has been subtractive, where we use tools and machines for removing material to create the shape of the object we want. 3D printers add many thin layers one at a time to create and build an object. Add enough layers together, and you can create a solid object. If you need to make something thicker, adding layers to it is a way to make something that is thin, thicker. Think of a sheet of paper, since it's pretty thin. Add 500 sheets together in a stack (which, by the way, makes a ream of paper), and you've got a thick object. Instead of keeping each sheet of paper separate, imagine that they are glued together into a solid piece of material, and you've got a block, not 500 sheets.`,
+      author: 'David Bosh',
+      authorBio: 'A showroom owner who is also technology enthusist',
+      publishDate: new Date('2024-02-01'),
+      noOfLikes: 13,
+      images: ['assets/3dprinter.jpg'],
+      links: ['https://en.wikipedia.org/wiki/3D_printing'],
       comments: [
         {
-          username: 'User1',
-          text: 'Great article!',
-          id: 1,
+          username: 'Michael',
+          text: 'Now I want to buy a 3D printer!',
+          id: 3,
           noOfLikes: 2,
           replies: [
             {
-              username: 'User2',
-              id: 2,
-              text: 'I agree!',
+              username: 'Vincent',
+              id: 6,
+              text: 'I sell those, please contact me',
               noOfLikes: 1
             }
           ]
@@ -68,49 +67,33 @@ export class ArticleService {
     },
     {
       articleId: 2,
-      title: 'Second Article',
+      title: 'What is an NPU?',
       // thumbnail: 'path/to/thumbnail2.jpg',
-      description: 'This is the description of the second article.',
-      author: 'Author 1',
-      authorBio: 'Bio for Author 1',
-      publishDate: new Date('2024-01-02'),
-      noOfLikes: 10,
-      images: ['assets/property1.jpg'],
-      links: ['https://example.com'],
-      comments: [
-        {
-          username: 'User2',
-          text: 'Nice article!',
-          id: 3,
-          noOfLikes: 3,
-          replies: [
-            {
-              id: 4,
-              username: 'User3',
-              text: 'Totally!',
-              noOfLikes: 2
-            }
-          ]
-        }
-      ]
-    },
-    {
-      articleId: 3,
-      title: '3D Printer',
-      // thumbnail: 'path/to/thumbnail2.jpg',
-      description: `3D printers create objects using by "printing" many thin layers thin of liquid material that dries to a solid shape. These layers are printed one at a time, but when added together, they create a 3 dimensional solid object. Adding layers together is called an "additive" process for creating an object. You might be familiar with wood carving, where the wood carver removes wood to create the sculpture. The carving removes material to create the object, and it's called a "subtractive" process. Much of our manufacturing has been subtractive, where we use tools and machines for removing material to create the shape of the object we want. 3D printers add many thin layers one at a time to create and build an object. Add enough layers together, and you can create a solid object. If you need to make something thicker, adding layers to it is a way to make something that is thin, thicker. Think of a sheet of paper, since it's pretty thin. Add 500 sheets together in a stack (which, by the way, makes a ream of paper), and you've got a thick object. Instead of keeping each sheet of paper separate, imagine that they are glued together into a solid piece of material, and you've got a block, not 500 sheets.`,
+      description: `A Neural Processing Unit (NPU) is a specialized processor that accelerates machine learning and AI tasks. Think of it as the brain within your device that handles complex computations, enabling it to perform tasks requiring artificial intelligence (AI) more efficiently. 
+
+Traditional processors, like the Central Processing Unit (CPU) and Graphics Processing Unit (GPU), are versatile and handle various tasks. However, the CPU and GPU  are not optimized for the specific demands of AI workloads. While CPUs and GPUs can run AI and machine learning, they are slower, sometimes significantly, than a specialized NPU processor.  
+
+The latest chips in our devices combine a CPU, GPU, and NPU on a single chip, usually called a System on a Chip.`,
       author: 'David Bosh',
       authorBio: 'A showroom owner who is also technology enthusist',
       publishDate: new Date('2024-03-09'),
-      noOfLikes: 3,
-      images: ['assets/3dprinter.jpg'],
-      links: ['https://en.wikipedia.org/wiki/3D_printing'],
+      noOfLikes: 6,
+      images: ['assets/npu.png'],
+      links: ['https://en.wikipedia.org/wiki/AI_accelerator'],
       comments: [
         {
-          username: 'Michael',
-          text: 'Nice article!',
+          username: 'John',
+          text: 'I found the link helpful',
           id: 3,
           noOfLikes: 2,
+          replies: [
+            {
+              username: 'Steve',
+              id: 5,
+              text: 'me too',
+              noOfLikes: 1
+            }
+          ]
         }
       ]
     },

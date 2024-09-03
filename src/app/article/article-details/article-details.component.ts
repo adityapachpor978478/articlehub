@@ -21,9 +21,13 @@ export class ArticleDetailsComponent implements OnInit {
   constructor(private route: ActivatedRoute, private articleService: ArticleService, private router: Router) { }
 
   ngOnInit(): void {
-    const articleId: any = this.route.snapshot.paramMap.get('articleId');
-    this.article = this.articleService.getArticleById(articleId);
-    this.suggestions = this.articleService.getArticles().filter(a => a.author === this.article.author && a.articleId !== articleId);
+    this.route.snapshot.paramMap.get('articleId');
+    this.route.params.subscribe((data: any) => {
+      const articleId = data.articleId;
+      this.article = this.articleService.getArticleById(articleId);
+      this.suggestions = this.articleService.getArticles().filter(a => (a.author === this.article.author && a.articleId != articleId));
+    })
+
   }
 
   navigateToArticle(articleId: string) {
@@ -36,7 +40,7 @@ export class ArticleDetailsComponent implements OnInit {
 
   urlify(text: any) {
     var urlRegex = /(https?:\/\/[^\s]+)/g;
-    return text.replace(urlRegex, function(url: string) {
+    return text.replace(urlRegex, function (url: string) {
       return `<a href="${url}" target="_blank">${url}</a>`;
     })
   }
@@ -95,7 +99,7 @@ export class ArticleDetailsComponent implements OnInit {
         text: this.commentText,
         noOfLikes: 0
       };
-      if(!this.article.comments) {
+      if (!this.article.comments) {
         this.article.comments = [];
       }
       this.article.comments.push(newComment)
