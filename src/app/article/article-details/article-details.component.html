@@ -6,9 +6,11 @@
 <div class="article-details container mt-5">
   <h1>{{ article.title }}</h1>
   <p><strong>Author:</strong> {{ article.author }} | <strong>Date:</strong> {{ article.publishDate | date }}</p>
-  <img *ngFor="let img of article.images" [src]="img" alt="Article Image" class="img-fluid mt-3 mb-3">
-  <ng-container *ngIf="article.links.length">
-    <div *ngFor="let link of article.links">
+  <ng-container  *ngFor="let img of article.images">
+    <img [src]="img" alt="Article Image" class="img-fluid mt-3 mb-3">
+  </ng-container>
+  <ng-container *ngIf="article.links?.length">
+    <div class="mb-2" *ngFor="let link of article.links">
       <span [innerHTML]="urlify(link)"></span>
     </div>
   </ng-container>
@@ -44,7 +46,7 @@
   <div class="row" *ngIf="suggestions.length">
     <div class="col-md-4" *ngFor="let suggestion of suggestions" (click)="navigateToArticle(suggestion.articleId)">
       <div class="card">
-        <img [src]="suggestion.thumbnail" class="card-img-top" alt="...">
+        <!-- <img [src]="suggestion.thumbnail" class="card-img-top" alt="..."> -->
         <div class="card-body">
           <h5 class="card-title">{{ suggestion.title }}</h5>
         </div>

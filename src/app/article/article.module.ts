@@ -10,6 +10,7 @@ import { AddArticleComponent } from './add-article/add-article.component';
 import { CommentThreadComponent } from './comment-thread/comment-thread.component';
 import { AuthorsComponent } from './authors/authors.component';
 import { AuthorDetailsComponent } from './author-details/author-details.component';
+import { EllipsisPipe } from './ellipsis.pipe';
 
 
 @NgModule({
@@ -20,7 +21,8 @@ import { AuthorDetailsComponent } from './author-details/author-details.componen
     AddArticleComponent,
     CommentThreadComponent,
     AuthorsComponent,
-    AuthorDetailsComponent
+    AuthorDetailsComponent,
+    EllipsisPipe
   ],
   imports: [
     CommonModule,

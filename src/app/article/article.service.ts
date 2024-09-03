@@ -3,12 +3,12 @@ import { Injectable } from '@angular/core';
 export interface Article {
   articleId: number;
   title: string;
-  thumbnail: string;
+  thumbnail?: string;
   description: string;
   author: string;
   authorBio?: string;
   images: string[];
-  links: string[];
+  links?: string[];
   publishDate: Date;
   noOfLikes: number;
   comments: Comment[];
@@ -41,13 +41,13 @@ export class ArticleService {
     {
       articleId: 1,
       title: 'First Article',
-      thumbnail: 'path/to/thumbnail1.jpg',
+      // thumbnail: 'path/to/thumbnail1.jpg',
       description: 'This is the description of the first article.',
       author: 'Author 8',
       authorBio: 'Bio for Author 8',
       publishDate: new Date('2024-01-01'),
       noOfLikes: 10,
-      images: ['https://www.wordscoach.com/blog/wp-content/uploads/2020/06/17th-Blog-Articles-1140x624.png'],
+      images: ['assets/property1.jpg'],
       links: ['https://example.com'],
       comments: [
         {
@@ -69,13 +69,13 @@ export class ArticleService {
     {
       articleId: 2,
       title: 'Second Article',
-      thumbnail: 'path/to/thumbnail2.jpg',
+      // thumbnail: 'path/to/thumbnail2.jpg',
       description: 'This is the description of the second article.',
       author: 'Author 1',
       authorBio: 'Bio for Author 1',
       publishDate: new Date('2024-01-02'),
       noOfLikes: 10,
-      images: ['https://www.wordscoach.com/blog/wp-content/uploads/2020/06/17th-Blog-Articles-1140x624.png'],
+      images: ['assets/property1.jpg'],
       links: ['https://example.com'],
       comments: [
         {
@@ -94,9 +94,29 @@ export class ArticleService {
         }
       ]
     },
-   ];
+    {
+      articleId: 3,
+      title: '3D Printer',
+      // thumbnail: 'path/to/thumbnail2.jpg',
+      description: `3D printers create objects using by "printing" many thin layers thin of liquid material that dries to a solid shape. These layers are printed one at a time, but when added together, they create a 3 dimensional solid object. Adding layers together is called an "additive" process for creating an object. You might be familiar with wood carving, where the wood carver removes wood to create the sculpture. The carving removes material to create the object, and it's called a "subtractive" process. Much of our manufacturing has been subtractive, where we use tools and machines for removing material to create the shape of the object we want. 3D printers add many thin layers one at a time to create and build an object. Add enough layers together, and you can create a solid object. If you need to make something thicker, adding layers to it is a way to make something that is thin, thicker. Think of a sheet of paper, since it's pretty thin. Add 500 sheets together in a stack (which, by the way, makes a ream of paper), and you've got a thick object. Instead of keeping each sheet of paper separate, imagine that they are glued together into a solid piece of material, and you've got a block, not 500 sheets.`,
+      author: 'David Bosh',
+      authorBio: 'A showroom owner who is also technology enthusist',
+      publishDate: new Date('2024-03-09'),
+      noOfLikes: 3,
+      images: ['assets/3dprinter.jpg'],
+      links: ['https://en.wikipedia.org/wiki/3D_printing'],
+      comments: [
+        {
+          username: 'Michael',
+          text: 'Nice article!',
+          id: 3,
+          noOfLikes: 2,
+        }
+      ]
+    },
+  ];
 
-   addArticle(article: Article): void {
+  addArticle(article: Article): void {
     this.articles.push(article);
   }
 
@@ -109,13 +129,13 @@ export class ArticleService {
   }
 
   likeArticle(articleId: number): void {
-    const article = this.articles.find((a:any) => a.articleId == articleId);
+    const article = this.articles.find((a: any) => a.articleId == articleId);
     if (article && !article.likedByUser) {
       article.noOfLikes++;
       article.likedByUser = true;
     }
   }
-  
+
   unlikeArticle(articleId: number): void {
     const article = this.articles.find((a: any) => a.articleId === articleId);
     if (article && article.likedByUser) {
@@ -123,7 +143,7 @@ export class ArticleService {
       article.likedByUser = false;
     }
   }
-  
+
   addReply(articleId: number, parentCommentId: number, reply: Comment): void {
     const article = this.articles.find(a => a.articleId === articleId);
     const parentComment = this.findCommentById(article?.comments, parentCommentId);
@@ -132,7 +152,7 @@ export class ArticleService {
       parentComment.replies.push(reply);
     }
   }
-  
+
   private findCommentById(comments: Comment[] | undefined, id: number): Comment | undefined {
     if (!comments) return undefined;
     for (const comment of comments) {
@@ -170,7 +190,7 @@ export class ArticleService {
 
   getArticlesByAuthor(authorName: string): Article[] {
     return this.articles.filter(article => article.author === authorName);
-  }  
-  
-  
+  }
+
+
 }
