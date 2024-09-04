@@ -230,6 +230,199 @@ University researchers have rigorous science communication requirements that inc
         }
       ]
     },
+    {
+      articleId: 7,
+      title: 'The biology of smell is a mystery',
+      // thumbnail: 'path/to/thumbnail2.jpg',
+      description: `one of the problems with understanding smell: the chemical structure of a molecule tells you almost nothing about its odour. Two chemicals with very similar structures can smell wildly different; and two wildly different chemical structures can produce an almost identical odour. And most smells — coffee, Camembert, ripe tomatoes — are mixtures of many tens or hundreds of aroma molecules, intensifying the challenge of understanding how chemistry gives rise to olfactory experience.
+
+Another problem is working out how smells relate to each other. With vision, the spectrum is a simple colour palette: red, green, blue and all their swirling intermediates. Sounds have a frequency and a volume, but for smell there are no obvious parameters. Where does an odour identifiable as ‘frost’ sit in relation to ‘sauna’? It’s a real challenge to make predictions about smell, says Joel Mainland, a neuroscientist at the Monell Chemical Senses Center, an independent research institute in Philadelphia, Pennsylvania.
+      `,
+      author: 'Richard Smith',
+      authorBio: 'A scholar from Harvard University who likes nature and wildlife',
+      publishDate: new Date('2024-01-6'),
+      noOfLikes: 11,
+      images: ['assets/smell.gif'],
+      links: ['https://en.wikipedia.org/wiki/Sense_of_smell'],
+      comments: [
+        {
+          username: 'Kramer',
+          text: 'wow! never thought there were so many factors behind smell',
+          id: 3,
+          noOfLikes: 3,
+          replies: [
+            {
+              username: 'Julie',
+              id: 4,
+              text: 'Haha same!',
+              noOfLikes: 2
+            }
+          ]
+        }
+      ]
+    },
+    {
+      articleId: 8,
+      title: 'Why I love drilling in the mountains early in the morning',
+      // thumbnail: 'path/to/thumbnail2.jpg',
+      description: `I'm a technician with the Institute for Interdisciplinary Mountain Research of the Austrian Academy of Sciences in Innsbruck. I often work in temperatures as low as −18 °C, fixing small parts of equipment, so sometimes I can’t wear gloves. It takes a certain type of person to do this: you have to be able to focus when you’re very cold. Everyone on the team is very resilient, knowledgeable and quick to solve problems.
+
+Variations in the layers of the glacier's ice cores reveal periods of expansion and retreat over 6,000 years. By aligning the history of the glacier with temperature records that have been collected since 1850, we can see how the climate of Europe’s alpine region has changed with global warming and how it’s likely to change in the future. The ice is a climate archive.
+
+I'm in the mountains for around 70 days a year, mostly from May to the end of September. I love this work, because I’m outside using my hands and my brain, and I’m playing a part in achieving a better understanding of our world.”
+      `,
+      author: 'Richard Smith',
+      authorBio: 'A scholar from Harvard University who likes nature and wildlife',
+      publishDate: new Date('2024-01-7'),
+      noOfLikes: 17,
+      images: ['assets/mountain.webp'],
+      links: ['https://en.wikipedia.org/wiki/Ice_drilling'],
+      comments: [
+        {
+          username: 'Geoge',
+          text: 'I wish I had such a cool job!',
+          id: 3,
+          noOfLikes: 1,
+          replies: [
+            {
+              username: 'Richard',
+              id: 4,
+              text: 'You are welcome to join me George!',
+              noOfLikes: 1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      articleId: 9,
+      title: 'Pulp, paper, and packaging in the next decade',
+      // thumbnail: 'path/to/thumbnail2.jpg',
+      description: `From what you read in the press and hear on the street, you might be excused for believing the paper and forest-products industry is disappearing fast in the wake of digitization. The year 2015 saw worldwide demand for graphic paper decline for the first time ever, and the fall in demand for these products in North America and Europe over the past five years has been more pronounced than even the most pessimistic forecasts.
+
+But the paper and forest-products industry as a whole is growing, albeit at a slower pace than before, as other products are filling the gap left by the shrinking graphic-paper1 market (Exhibit 1). Packaging is growing all over the world, along with tissue papers, and pulp for hygiene products. Although a relatively small market as yet, pulp for textile applications is growing. And a broad search for new applications and uses for wood and its components is taking place in numerous labs and development centers. The paper and forest-products industry is not disappearing—far from it. But it is changing, morphing, and developing. We would argue that the industry is going through the most substantial transformation it has seen in many decades.
+      `,
+      author: 'Steve Carell',
+      authorBio: 'Regional Manager at a paper company who enjoys every moment of his life',
+      publishDate: new Date('2023-05-12'),
+      noOfLikes: 11,
+      images: ['assets/paper.jpg'],
+      links: ['https://en.wikipedia.org/wiki/Paper_(company)'],
+      comments: [
+        {
+          username: 'Dwight',
+          text: 'Could you please share insights about the changes we would face in paper sales?',
+          id: 3,
+          noOfLikes: 2,
+          replies: [
+            {
+              username: 'Angela',
+              id: 4,
+              text: 'Yes, I\'d like to know that too!',
+              noOfLikes: 1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      articleId: 10,
+      title: 'Paper Organizing & Management',
+      // thumbnail: 'path/to/thumbnail2.jpg',
+      description: `
+      id you know that, according to the National Association of Organizing & Productivity Professionals (NAPO), the average American receives 49,060 pieces of mail in their lifetime and much of it is junk mail?
+
+At the same time, the Small Business Administration reports that 80% of the papers we file are never looked at again.
+
+Paper clutter can take many forms – from bills and receipts piling up – to business and inventory documentation issues.
+      Many documents come through the mail that look very “official”, very “legal”, but they really are just solicitations. With our paper expertise, we can very quickly segregate junk mail from legitimate mail. We clear out the piles of paper and unopened envelopes.
+
+      `,
+      author: 'Steve Carell',
+      authorBio: 'Regional Manager at a paper company who enjoys every moment of his life',
+      publishDate: new Date('2023-04-11'),
+      noOfLikes: 5,
+      images: ['assets/papermanagement.jpg'],
+      links: ['https://en.wikipedia.org/wiki/Mail'],
+      comments: [
+        {
+          username: 'Dwight',
+          text: 'It seems to be necessary to manage the mails',
+          id: 3,
+          noOfLikes: 2,
+          replies: [
+            {
+              username: 'Tony',
+              id: 4,
+              text: 'I always keep it as priority before it piles up',
+              noOfLikes: 0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      articleId: 11,
+      title: 'Paper-Based Processes Worth Automating for Your Business',
+      // thumbnail: 'path/to/thumbnail2.jpg',
+      description: `Depending on the scanning technology that you employ, along with whether or not the documents are stored as images, the major issue here is that none of the content in the documents is actually searchable. This type of document storage is usually combined with some form of metadata attached to each file. Examples include the name of the document, the date, the author and even a summary of what is inside. The metadata is usually kept in a database, and this is what is searchable - not the document itself.
+
+While using document scanning can certainly be a viable solution under specific conditions, it's less than ideal for these reasons. It can, however, be a good way to digitize old documents, such as property deeds that may be handwritten and may be decades or even hundreds of years old.
+
+Another method of scanning documents has to do with a situation where you're dealing with files that were originally typeset or done with a work processor as opposed to being handwritten. They can be scanned using optical character recognition technology, also commonly referred to as OCR. This will generate documents that are searchable once they have been fully converted into their final digital form.
+      `,
+      author: 'Steve Carell',
+      authorBio: 'Regional Manager at a paper company who enjoys every moment of his life',
+      publishDate: new Date('2023-03-20'),
+      noOfLikes: 6,
+      images: ['assets/automate.jpg'],
+      links: ['https://en.wikipedia.org/wiki/Digital_mailroom'],
+      comments: [
+        {
+          username: 'James',
+          text: 'I need to buy a scanner',
+          id: 3,
+          noOfLikes: 1,
+          replies: [
+            {
+              username: 'Oscar',
+              id: 4,
+              text: 'Same here',
+              noOfLikes: 1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      articleId: 12,
+      title: 'Packaging and paper',
+      // thumbnail: 'path/to/thumbnail2.jpg',
+      description: `The world of paper and forest products is both rooted in tradition, centered as it is on the harvesting of basic materials and undergoing enormous change as consumption patterns evolve. We help clients refine their business strategies and operating models to resolve pressing business problems, such as how and where to find growth when their core business is stagnant or contracting, how to reduce costs throughout the business in the face of intense cost-price pressure, and how to evolve strategies and transition capacity in declining markets such as graphic papers. We also help companies respond to opportunities to innovate both in operations areas such as energy consumption and in product lines such as packaging.
+      `,
+      author: 'Steve Carell',
+      authorBio: 'Regional Manager at a paper company who enjoys every moment of his life',
+      publishDate: new Date('2023-02-12'),
+      noOfLikes: 3,
+      images: ['assets/packaging.webp'],
+      links: ['https://en.wikipedia.org/wiki/Paper'],
+      comments: [
+        {
+          username: 'Phyllis',
+          text: 'Good read',
+          id: 3,
+          noOfLikes: 1,
+          replies: [
+            {
+              username: 'Meridith',
+              id: 4,
+              text: 'yes',
+              noOfLikes: 1
+            }
+          ]
+        }
+      ]
+    },
   ];
 
   addArticle(article: Article): void {
