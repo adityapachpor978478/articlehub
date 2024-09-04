@@ -12,4 +12,12 @@
   .author-row {
     text-align: right;
   }
+
+  .preview-container {
+    max-height: 420px;
+    overflow-y: auto;
+    padding: 6px;
+    border: 1px solid #e0e0e0;
+    border-radius: 5px;
+  }
   

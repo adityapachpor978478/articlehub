@@ -32,6 +32,8 @@ export class ArticleDetailsComponent implements OnInit {
 
   navigateToArticle(articleId: string) {
     this.router.navigate(['/dashboard/article', articleId]);
+    document.body.scrollTop = document.documentElement.scrollTop = 0
+
   }
 
   goBack() {

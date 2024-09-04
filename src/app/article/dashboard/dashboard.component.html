@@ -19,11 +19,13 @@
       <a class="link-primary" style="cursor: pointer;" (click)="navigateToAuthors()">authors</a>
     </div>
   
-    <div *ngFor="let article of filteredArticles" class="article-preview mb-4" (click)="navigateToArticle(article.articleId)">
-      <h3>{{ article.title }}</h3>
-      <p>{{ article.description | ellipsis:350 }}</p>
-      <p><strong>Author:</strong> {{ article.author }} | <strong>Date:</strong> {{ article.publishDate | date }}</p>
-      <p><strong>Likes:</strong> {{ article.noOfLikes }}</p>
+    <div class="preview-container">
+      <div *ngFor="let article of filteredArticles" class="article-preview mb-4" (click)="navigateToArticle(article.articleId)">
+        <h3>{{ article.title }}</h3>
+        <p>{{ article.description | ellipsis:350 }}</p>
+        <p><strong>Author:</strong> {{ article.author }} | <strong>Date:</strong> {{ article.publishDate | date }}</p>
+        <p><strong>Likes:</strong> {{ article.noOfLikes }}</p>
+      </div>
     </div>
   
     <div *ngIf="totalPages > 1" class="pagination-row d-flex justify-content-center mt-4">
